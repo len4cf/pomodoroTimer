@@ -20,6 +20,12 @@ document.addEventListener("click", function (ev) {
     isCurto = curtoBtn;
     isLongo = longoBtn;
 
+    clearInterval(timerInterval);
+    isPaused = false;
+    startBtn.innerHTML = isPaused ? "PAUSE" : "START";
+    startBtn.classList.remove("pauseBtn");
+    startBtn.classList.add("startBtn");
+
     if (pomodoroBtn || curtoBtn || longoBtn) {
       const allButtons = document.querySelectorAll(
         ".pomodoroBtn, .curtoBtn, .longoBtn"
