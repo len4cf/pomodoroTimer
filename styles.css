@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+:root {
+  --button-color: #84a7c5;
+  --button-hover-color: rgb(132, 167, 197, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+body {
+  background-color: rgb(7, 65, 115, 0.8);
+  border-radius: 20px;
+  border: 3px solid black;
+  margin: 7% 0;
+  padding: 0 10%;
+}
+
+html {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  margin-top: 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  align-items: center;
+}
+
+.tomatoIcon {
+  width: 50px;
+  height: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.btnOptions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.btnOptions > button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-color);
+  box-shadow: 0 2px 0 2px #000;
+}
+
+.btnOptions > button:active {
+  transform: scale(0.9);
+}
+
+.btnOptions > button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.btnOptions > button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--button-color);
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 120px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #d9d9d9;
+  border: 2px solid black;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.startBtn,
+.pauseBtn,
+.resetBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.startBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pauseBtn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.resetBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.timer {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .timer {
+    font-size: 4rem;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .main-container {
+    margin: 10px;
+    margin-top: 60px;
+  }
+
+  .btnOptions {
+    flex-direction: column;
+  }
+}
