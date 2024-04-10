@@ -11,26 +11,30 @@ let timerInterval;
 let timeLeft = 1500;
 
 document.addEventListener("click", function (ev) {
-  const isPomodoro = ev.target.classList.contains("pomodoroBtn");
-  const isCurto = ev.target.classList.contains("curtoBtn");
-  const isLongo = ev.target.classList.contains("longoBtn");
+  const pomodoroBtn = ev.target.classList.contains("pomodoroBtn");
+  const curtoBtn = ev.target.classList.contains("curtoBtn");
+  const longoBtn = ev.target.classList.contains("longoBtn");
 
-  if (isPomodoro || isCurto || isLongo) {
-    if (isPomodoro || isCurto || isLongo) {
+  if (pomodoroBtn || curtoBtn || longoBtn) {
+    isPomodoro = pomodoroBtn;
+    isCurto = curtoBtn;
+    isLongo = longoBtn;
+
+    if (pomodoroBtn || curtoBtn || longoBtn) {
       const allButtons = document.querySelectorAll(
         ".pomodoroBtn, .curtoBtn, .longoBtn"
       );
       allButtons.forEach((button) => button.removeAttribute("disabled"));
 
-      if (isPomodoro) {
+      if (pomodoroBtn) {
         pomodoroBotao.setAttribute("disabled", "disabled");
         timeLeft = 1500;
         timerDisplay.innerHTML = "25:00";
-      } else if (isCurto) {
+      } else if (curtoBtn) {
         curtoBotao.setAttribute("disabled", "disabled");
         timeLeft = 300;
         timerDisplay.innerHTML = "05:00";
-      } else if (isLongo) {
+      } else if (longoBtn) {
         longoBotao.setAttribute("disabled", "disabled");
         timeLeft = 3600;
         timerDisplay.innerHTML = "60:00";
