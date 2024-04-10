@@ -1,6 +1,9 @@
 # Pomodoro Timer
 
-<img src="pomodoroTimerImg.png" alt="Pomodoro Imagem">
+<div>
+  <img src="pomodoroTimerImg.png" alt="Pomodoro Imagem" style="width: 500px">
+  <img src="pomodoroTimerIphone.png" alt="Pomodoro Imagem">
+</div>
 
 > O Pomodoro Timer utiliza da técnica Pomodoro. A técnica consiste na utilização de um cronômetro para dividir o trabalho/estudo em períodos de 25 minutos. O projeto consta com, além dos 25 minutos disponíveis para estudo, também conta com intervalos curtos de 5 minutos e intervalos longos de 60 minutos.
 
